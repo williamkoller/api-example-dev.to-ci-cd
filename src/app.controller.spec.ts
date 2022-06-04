@@ -15,8 +15,10 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return "welcome to the @dev.to example api with CI/CD Heroku."', () => {
+      expect(appController.getHello()).toStrictEqual({
+        message: 'welcome to the @dev.to example api with CI/CD Heroku.',
+      });
     });
   });
 });
