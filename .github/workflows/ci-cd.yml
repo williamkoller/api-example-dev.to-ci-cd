@@ -25,6 +25,12 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
+      - name: Running test
+        run: yarn test
+
+      - name: Runnirng test e2e
+        run: yarn test:e2e
+
   continuos-delivery:
     runs-on: ubuntu-latest
 
