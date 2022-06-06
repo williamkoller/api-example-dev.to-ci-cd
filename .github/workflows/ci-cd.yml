@@ -28,8 +28,16 @@ jobs:
       - name: Running test
         run: yarn test
 
-      - name: Runnirng test e2e
+      - name: Running test e2e
         run: yarn test:e2e
+      
+      - name: Running coverage
+        run: yarn test:cov
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
   continuos-delivery:
     runs-on: ubuntu-latest
